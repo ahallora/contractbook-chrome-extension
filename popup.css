@@ -1,0 +1,135 @@
+body {
+    background-color: #fff;
+    padding: 0;
+    margin: 0;
+}
+
+#fb_sidebar {
+    width: 400px;
+    height: 600px;
+}
+
+#topbar {
+    height: 150px;
+    overflow: hidden;
+    padding: 0;
+}
+
+#bottombar {
+    height: 100px;
+    padding: 16px;
+}
+
+#example {
+    font-family: consolas;
+    background: yellow;
+    font-weight: 100;
+}
+
+#resultExample {
+    border: 1px dashed #1C01FF;
+    display: inline-block;
+    width: auto;
+    padding: 0px 3px;
+    line-height: 1;
+    margin: 0;
+    height: 18px;
+    width: 55px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #808080;
+    letter-spacing: 0.5px;
+    background-color: inherit;
+    border-radius: 0;
+    font-family: sans-serif;
+    outline: none;
+}
+
+#cblogo img {
+    width: 150px;
+    height: auto;
+    margin: 16px auto;
+    display: block;
+}
+
+h1 {
+    color: #444;
+    font-size: 13px;
+    line-height: 18px;
+    text-align: center;
+    font-weight: 300;
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+#editor_content {
+    border: 1px solid #ddd;
+    height: 100px;
+    overflow: auto;
+    font-size: 10px;
+    font-family: sans-serif;
+    padding: 8px;
+    display: block;
+    width: calc(100% - 48px);
+    margin: 0 16px;
+    height: calc(100vh - 300px) !important;
+    outline: none;
+}
+
+#editor_content:focus, #editor_content:active {
+    border: 1px solid #1C01FF;
+}
+
+#convert_btn {
+    width: 100%;
+    padding: 16px 32px;
+    background-color: #1C01FF;
+    color: #fff;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: sans-serif;
+    border-radius: 3px;
+    border: 0;
+    transition: all 250ms ease;
+    outline: none;
+}
+
+#convert_btn.done {
+    background-color: #1BDC77;
+    transition: all 250ms ease;
+}
+
+#fblogo {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+    color: #808080;
+    text-decoration: none;
+    font-size: 11px;
+    font-family: sans-serif;
+    padding: 0 16px;
+}
+
+#fblogo>span {
+    padding-right: 24px;
+    padding-bottom: 6px;
+    text-align: right;
+    display: inline-block;
+}
+
+#fblogo img {
+    width: 150px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    margin-top: 16px;
+}
+
+[contenteditable="true"]:empty:before {
+    content: attr(placeholder);
+    display: block;
+    color: #808080;
+}
