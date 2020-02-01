@@ -6,7 +6,7 @@ chrome.runtime.onInstalled.addListener(function() {
       {
         conditions: [
           new chrome.declarativeContent.PageStateMatcher({
-            pageUrl: { urlMatches: "contractbook.co" },
+            pageUrl: { urlMatches: "contractbook.com" },
           }),
         ],
         actions: [new chrome.declarativeContent.ShowPageAction()],

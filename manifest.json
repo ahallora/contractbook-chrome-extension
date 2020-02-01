@@ -1,6 +1,6 @@
 {
   "name": "Contractbook Converter",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Easily convert your contract variables from Word or GDocs into Contractbook Editable fields.",
   "permissions": ["activeTab", "declarativeContent"],
   "background": {
