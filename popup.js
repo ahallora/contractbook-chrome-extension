@@ -8,13 +8,14 @@ let fb_btn = document.querySelector("#convert_btn");
 function replaceTagsWithInputs(str) {
   let newstr = str.replace(inputRegexp, (match, p1, p2) => {
     return (
-      '<input name="' +
-      p2.toLowerCase() +
-      '" type="text" value="" placeholder="[' +
-      p2 +
-      ']" data-contract-editable="true" />'
+      //`<input name="${p2.toLowerCase()}" type="text" value="" placeholder="[${p2}]" data-contract-editable="true" />`
+      `<span data-editable-field="true" data-name="${p2.toLowerCase()}"></span>` 
     );
   });
+  
+<span data-editable-field="true" data-name="Editable field"></span>
+
+
   return newstr;
 }
 
