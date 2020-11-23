@@ -7,21 +7,15 @@ let fb_btn = document.querySelector("#convert_btn");
 
 function replaceTagsWithInputs(str) {
   let newstr = str.replace(inputRegexp, (match, p1, p2) => {
-    return (
-      //`<input name="${p2.toLowerCase()}" type="text" value="" placeholder="[${p2}]" data-contract-editable="true" />`
-      `<span data-editable-field="true" data-name="${p2.toLowerCase()}"></span>` 
-    );
+    return `<span data-editable-field="true" data-name="${p2.toLowerCase()}"></span>`;
   });
-  
-<span data-editable-field="true" data-name="Editable field"></span>
-
 
   return newstr;
 }
 
 function copyToClip(str) {
   // credits: https://stackoverflow.com/a/50067769/4893390
-  let listener = e => {
+  let listener = (e) => {
     e.clipboardData.setData("text/html", str);
     e.clipboardData.setData("text/plain", str);
     e.preventDefault();
@@ -44,7 +38,7 @@ function changeButtonState() {
   fb_btn.innerText = "Done - Copied to clipboard";
   fb_btn.classList.add("done");
   fb_btn.disabled = true;
-  window.setTimeout(function() {
+  window.setTimeout(function () {
     fb_btn.innerText = "Convert";
     fb_btn.classList.remove("done");
     fb_btn.disabled = false;
@@ -57,8 +51,8 @@ function outputDeveloperObject() {
   let strObj = {};
   if (fields) {
     fields
-      .map(x => x.replace(inputRegexp, (match, p1, p2) => p2.toLowerCase()))
-      .forEach(x => {
+      .map((x) => x.replace(inputRegexp, (match, p1, p2) => p2.toLowerCase()))
+      .forEach((x) => {
         return (strObj[x] = "");
       });
 
